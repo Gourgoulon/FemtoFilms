@@ -39,43 +39,46 @@
 
         /* Styles pour Mobile */
         @media (max-width: 768px) {
-            .video-container {
-                display: block;
-                position: relative;
-                width: 100%;
-                height: 100vh;
-            }
-            .video-wrapper {
-                width: 100%;
-                height: 100vh;
-                position: absolute;
-                top: 0;
-                left: 0;
-                transition: opacity 1.5s ease-in-out; /* Transition en fondu */
-            }
-            .video-hidden {
-                opacity: 0; /* Fait disparaître la vidéo progressivement */
-            }
-            .text-container {
-                display: none;
-                width: 100%;
-                height: 100vh;
-                justify-content: center;
-                align-items: center;
-                padding: 0;
-                opacity: 0; /* Caché au début */
-                transition: opacity 1.5s ease-in-out; /* Apparition en fondu */
-            }
-            .text-visible {
-                display: flex; /* Affiche les titres */
-                opacity: 1; /* Les rend visibles progressivement */
-            }
-            .text-container h1 {
-                font-size: 3rem;
-                font-weight: bolder;
-                margin-bottom: 20px;
-            }
-        }
+    .video-container {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    .video-wrapper {
+        width: 90%; /* Réduit légèrement la largeur */
+        height: 90vh; /* Réduit la hauteur pour éviter la coupure */
+        position: absolute;
+        top: 5%; /* Décalage vers le haut */
+        left: 50%;
+        transform: translateX(-50%); /* Centre la vidéo */
+        transition: opacity 1.5s ease-in-out;
+    }
+    .video-hidden {
+        opacity: 0; /* Fait disparaître la vidéo progressivement */
+    }
+    .text-container {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        opacity: 0; /* Caché au début */
+        transition: opacity 1.5s ease-in-out;
+    }
+    .text-visible {
+        display: flex; /* Affiche les titres */
+        opacity: 1; /* Les rend visibles progressivement */
+    }
+    .text-container h1 {
+        font-size: 2.8rem; /* Réduction de la taille si besoin */
+        font-weight: bolder;
+        margin-bottom: 15px;
+        padding-top: 5vh; /* Remonte légèrement les titres */
+    }
+}
+
     </style>
 </head>
 <body style="margin: 0; height: 100vh; overflow: hidden; background-color: black;">
