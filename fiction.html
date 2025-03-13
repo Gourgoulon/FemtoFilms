@@ -48,8 +48,7 @@
             overflow: hidden;
         }
 
-        /* Texte superposé sur les vidéos */
-
+        /* Texte superposé sur la grande vidéo */
         .video-bigtext {
             position: absolute;
             top: 50%;
@@ -70,12 +69,13 @@
             transform: translate(-50%, -50%);
             color: white;
             font-size: 30px;
-            font-weight: thin ;
+            font-weight: 300;
             text-align: left;
             padding: 10px 20px;
             border-radius: 5px;
         }
 
+        /* Texte superposé sur les vidéos de la grille */
         .video-text {
             position: absolute;
             top: 50%;
@@ -97,8 +97,9 @@
             color: white;
             font-size: 18px;
             text-align: left;
-            padding: 10px 0px;
+            padding: 0px;
             border-radius: 5px;
+            white-space: nowrap;
         }
 
         /* Vidéos bien ajustées */
@@ -116,7 +117,7 @@
             padding-top: 60px;
         }
 
-        /* Responsive : Ajuster la hauteur sur mobile */
+        /* Responsive : Ajuster la taille du texte sur mobile */
         @media (max-width: 768px) {
             .full-width-video {
                 height: 300px;
@@ -126,9 +127,39 @@
                 height: 200px;
             }
 
-            .video-text {
+            /* Réduction de la taille du texte sur mobile */
+            .video-bigtext {
+                font-size: 24px;
+                left: 50%;
+                text-align: center;
+                width: 100%;
+                transform: translate(-50%, -50%);
+            }
+
+            .video-bigsubtext {
                 font-size: 18px;
+                left: 50%;
+                text-align: center;
+                width: 100%;
+                transform: translate(-50%, -50%);
+            }
+
+            .video-text {
+                font-size: 16px;
+                left: 70%;
+                text-align: center;
+                width: 100%;
                 padding: 5px 10px;
+                transform: translate(-50%, -50%);
+            }
+
+            .video-subtext {
+                font-size: 14px;
+                left: 70%;
+                text-align: center;
+                width: 100%;
+                padding: 5px 0px;
+                transform: translate(-50%, -50%);
             }
         }
     </style>
@@ -154,7 +185,7 @@
     </div>
 
     <!-- Conteneur principal -->
-    <div class="container-fluid content" style="margin: 0; padding-left: 0; padding-right: 0;">
+    <div class="container-fluid content" style="padding-left: 0px; padding-right: 0px;">
         <div class="row g-0">
             <!-- Colonne 1 -->
             <div class="col-md-4">
@@ -163,7 +194,7 @@
                         <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/BA_ruptur_website.mp4" type="video/mp4">
                     </video>
                     <div class="video-text">RUPTUR</div>
-                    <div class="video-subtext">COURT METRAGE</div>
+                    <div class="video-subtext">COURT MÉTRAGE</div>
                 </div>
             </div>
 
@@ -174,7 +205,7 @@
                         <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/BA_pulsion_website.mp4" type="video/mp4">
                     </video>
                     <div class="video-text">PULSION</div>
-                    <div class="video-subtext">COURT METRAGE</div>
+                    <div class="video-subtext">COURT MÉTRAGE</div>
                 </div>
             </div>
 
@@ -185,28 +216,11 @@
                         <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/BA_pulsion_website.mp4" type="video/mp4">
                     </video>
                     <div class="video-text">PULSION</div>
-                    <div class="video-subtext">COURT METRAGE</div>
+                    <div class="video-subtext">COURT MÉTRAGE</div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const videos = document.querySelectorAll(".hover-video");
-
-            videos.forEach(video => {
-                video.addEventListener("mouseenter", function () {
-                    video.play(); // Démarre la vidéo au survol
-                });
-
-                video.addEventListener("mouseleave", function () {
-                    video.pause(); // Met en pause la vidéo lorsque la souris quitte
-                    video.currentTime = 0; // Remet à zéro pour recommencer
-                });
-            });
-        });
-    </script>
 
 </body>
 </html>
