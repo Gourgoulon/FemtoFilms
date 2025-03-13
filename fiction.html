@@ -222,5 +222,22 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const videos = document.querySelectorAll(".hover-video");
+
+            videos.forEach(video => {
+                video.addEventListener("mouseenter", function () {
+                    video.play(); // Démarre la vidéo au survol
+                });
+
+                video.addEventListener("mouseleave", function () {
+                    video.pause(); // Met en pause la vidéo lorsque la souris quitte
+                    video.currentTime = 0; // Remet à zéro pour recommencer
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
