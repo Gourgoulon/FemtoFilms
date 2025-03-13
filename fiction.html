@@ -72,6 +72,10 @@
             .video-container {
                 height: 250px; /* Hauteur plus petite pour mobile */
             }
+
+            .hover-video {
+                pointer-events: none;
+            }
         }
     </style>
 </head>
@@ -80,7 +84,7 @@
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex justify-content-center align-items-center">
-            <a class="nav-link me-3" href="#about" style="color: white; font-size: 18px;">about us</a>
+            <a class="nav-link me-5" href="#about" style="color: white; font-size: 18px;">a propos</a>
             <a class="navbar-brand" href="#" style="color: white; font-size: 24px; font-weight: bold;">Femto Films</a>
             <a class="nav-link ms-3" href="#contact" style="color: white; font-size: 18px;">contact</a>
         </div>
@@ -88,7 +92,7 @@
 
     <!-- Vidéo pleine largeur au-dessus de la grille -->
     <div class="full-width-video">
-        <video autoplay muted playsinline>
+        <video autoplay muted loop playsinline>
             <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/showreel.mp4" type="video/mp4">
         </video>
     </div>
