@@ -29,7 +29,7 @@
         /* Vidéo pleine largeur */
         .full-width-video {
             width: 100%;
-            height: 500px; /* Hauteur fixe pour un bon rendu */
+            height: 500px;
             overflow: hidden;
             position: relative;
         }
@@ -37,18 +37,44 @@
         .full-width-video video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Assure que la vidéo remplit bien la zone */
+            object-fit: cover;
         }
 
-        /* Fixe la hauteur des vidéos de la grille */
+        /* Grille de vidéos */
         .video-container {
             position: relative;
             width: 100%;
-            height: 250px; /* Hauteur fixe */
+            height: 250px;
             overflow: hidden;
         }
 
-        /* Vidéos bien ajustées et centrées */
+        /* Texte superposé sur les vidéos */
+        .video-text {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .video-subtext {
+            position: absolute;
+            top: 60%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            text-align: left;
+            padding: 10px 0px;
+            border-radius: 5px;
+        }
+
+        /* Vidéos bien ajustées */
         .video-container video {
             position: absolute;
             top: 0;
@@ -66,15 +92,16 @@
         /* Responsive : Ajuster la hauteur sur mobile */
         @media (max-width: 768px) {
             .full-width-video {
-                height: 300px; /* Réduction de la hauteur sur mobile */
+                height: 300px;
             }
 
             .video-container {
-                height: 250px; /* Hauteur plus petite pour mobile */
+                height: 200px;
             }
 
-            .hover-video {
-                pointer-events: none;
+            .video-text {
+                font-size: 18px;
+                padding: 5px 10px;
             }
         }
     </style>
@@ -84,9 +111,9 @@
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex justify-content-center align-items-center">
-            <a class="nav-link me-5" href="#about" style="color: white; font-size: 18px;">a propos</a>
+            <a class="nav-link me-5" href="#about" style="color: white; font-size: 18px;">À propos</a>
             <a class="navbar-brand" href="#" style="color: white; font-size: 24px; font-weight: bold;">Femto Films</a>
-            <a class="nav-link ms-3" href="#contact" style="color: white; font-size: 18px;">contact</a>
+            <a class="nav-link ms-3" href="#contact" style="color: white; font-size: 18px;">Contact</a>
         </div>
     </nav>
 
@@ -98,7 +125,7 @@
     </div>
 
     <!-- Conteneur principal -->
-    <div class="container-fluid content" style="margin: 0%; padding-left: 0; padding-right: 0%;">
+    <div class="container-fluid content" style="margin: 0; padding-left: 0; padding-right: 0;">
         <div class="row g-0">
             <!-- Colonne 1 -->
             <div class="col-md-4">
@@ -106,6 +133,8 @@
                     <video class="hover-video" muted loop playsinline>
                         <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/BA_pulsion_website.mp4" type="video/mp4">
                     </video>
+                    <div class="video-text">PULSION</div>
+                    <div class="video-subtext">COURT METRAGE</div>
                 </div>
             </div>
 
@@ -115,6 +144,8 @@
                     <video class="hover-video" muted loop playsinline>
                         <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/BA_pulsion_website.mp4" type="video/mp4">
                     </video>
+                    <div class="video-text">PULSION</div>
+                    <div class="video-subtext">COURT METRAGE</div>
                 </div>
             </div>
 
@@ -124,6 +155,8 @@
                     <video class="hover-video" muted loop playsinline>
                         <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/BA_pulsion_website.mp4" type="video/mp4">
                     </video>
+                    <div class="video-text">PULSION</div>
+                    <div class="video-subtext">COURT METRAGE</div>
                 </div>
             </div>
         </div>
