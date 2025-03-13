@@ -49,6 +49,33 @@
         }
 
         /* Texte superposé sur les vidéos */
+
+        .video-bigtext {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 40px;
+            font-weight: bolder;
+            text-align: left;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .video-bigsubtext {
+            position: absolute;
+            top: 60%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 30px;
+            font-weight: thin ;
+            text-align: left;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
         .video-text {
             position: absolute;
             top: 50%;
@@ -122,6 +149,8 @@
         <video autoplay muted loop playsinline>
             <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/showreel.mp4" type="video/mp4">
         </video>
+        <div class="video-bigtext">NOS FICTIONS</div>
+        <div class="video-bigsubtext">écrites, réalisées, produites</div>
     </div>
 
     <!-- Conteneur principal -->
@@ -131,9 +160,9 @@
             <div class="col-md-4">
                 <div class="video-container">
                     <video class="hover-video" muted loop playsinline>
-                        <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/BA_pulsion_website.mp4" type="video/mp4">
+                        <source src="https://github.com/gourgoulon/femtofilms/raw/main/videos/BA_ruptur_website.mp4" type="video/mp4">
                     </video>
-                    <div class="video-text">PULSION</div>
+                    <div class="video-text">RUPTUR</div>
                     <div class="video-subtext">COURT METRAGE</div>
                 </div>
             </div>
