@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Femto Films</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Police d'écriture -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        .navbar {
+            background-color: black;
+            padding: 15px 0;
+        }
+        .nav-link, .navbar-brand {
+            color: white !important;
+            font-size: 18px;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        .navbar-brand {
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Red Rose', sans-serif;
+            color: #FCF0ED;
+        }
+        .about-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: justify;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s ease-out 0.5s forwards; /* Ajout d'un délai */
+        }
+        .image-container img {
+            max-width: 10%;
+            height: auto;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: #DB185C; /* Rose foncé */
+        }
+        a {
+            color: #DB185C;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <a class="nav-link me-5" href="/aboutus.html">a propos</a>
+            <a class="navbar-brand" href="/index.html">Femto Films</a>
+            <a class="nav-link ms-3" href="#contact">contact</a>
+        </div>
+    </nav>
+
+    <!-- Contenu de la page -->
+    <div class="about-container">
+        <p><span class="highlight">Femto Films</span> est une société de production française basée dans les Bouches-du-Rhône, fondée par <strong>Antoine Biguet</strong> et <strong>Maxime Castello</strong>, deux amis passionnés d'image et de cinéma. Antoine Biguet est spécialiste du drone et de l'étalonnage (<a href="https://nemoconception.com" target="_blank">voir son site</a>), et Maxime Castello est spécialiste du scénario et du mixage audio. </p>
+        <p>Avec <span class="highlight">Femto Films</span>, nous créons des vidéos pour :</p>
+        <ul>
+            <li><strong>Valoriser des produits et services</strong>, aider les entreprises à appuyer leur identité visuelle</li>
+            <li>Transmettre des émotions en racontant des histoires.</li>
+        </ul>
+    </div>
+
+    <!-- Image sous le texte -->
+    <div class="image-container">
+        <img src="/Images/Logo_FEMTO_I_icon_CLARET.png" alt="Logo">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
