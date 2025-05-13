@@ -1,0 +1,22 @@
+
+body {
+    background-color: black;
+    font-family: 'Source Sans 3', sans-serif;
+    color: white;
+}
+
+.navbar {
+        background-color: black;
+        padding: 15px 0;
+    }
+.nav-link, .navbar-brand {
+    color: #FCF0ED !important;
+    font-size: 18px;
+    font-family: 'Source Sans 3', sans-serif;
+}
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Red Rose', sans-serif;
+    color: #FCF0ED;
+}
