@@ -20,3 +20,48 @@ body {
     font-family: 'Red Rose', sans-serif;
     color: #FCF0ED;
 }
+
+ .project-item {
+      overflow: visible;
+      transition: transform 0.3s;
+    }
+
+    .project-image {
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    .project-item:hover .project-image {
+      transform: scale(1.03);
+    }
+
+    .project-info {
+      padding: 0.75rem;
+      text-align: left;
+      transform: translateY(0);
+      transition: transform 0.4s ease, scale 0.4s ease;
+    }
+
+    .project-item:hover .project-info {
+      transform: translateY(8px) scale(1.03);
+    }
+
+    .project-title {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      font-family: 'Red Rose', sans-serif;
+      font-size: 1.5rem ;
+      color: #DB185C;
+    }
+
+    .project-meta {
+      font-size: 0.9rem;
+      color: seashell;
+    }
+
+
+    .highlight {
+        color: #DB185C;
+        font-weight: bold;
+    }
