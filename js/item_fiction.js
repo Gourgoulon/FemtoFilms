@@ -54,7 +54,7 @@ const container = document.getElementById("projects-container");
   
 projects.forEach(project => {
   const item = document.createElement("div");
-  item.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+  item.className = "col-6 col-sm-6 col-md-4 col-lg-3";
   item.innerHTML = `
     <a href="${project.link}" class="project-item text-decoration-none text-white d-block">
       <div class="project-item">
